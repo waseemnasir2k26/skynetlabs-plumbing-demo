@@ -1,0 +1,279 @@
+{
+  "brand": {
+    "name": "SkynetLabs Plumbing Demo",
+    "tagline": "Desert-built plumbing for Phoenix homes"
+  },
+  "niche": "plumbing",
+  "niche_label": "Plumbing",
+  "location": {
+    "city": "Phoenix",
+    "region": "AZ",
+    "country": "US"
+  },
+  "owner": {
+    "name": "Waseem Nasir",
+    "agency": "SkynetLabs",
+    "fiverr_url": "https://www.fiverr.com/agencies/skynetjoellc",
+    "hub_url": "https://skynetjoe.com",
+    "contact_email": "waseembali2k26@gmail.com",
+    "contact_phone": "+1-602-555-0173"
+  },
+  "palette": {
+    "bg": "#F2EBE0",
+    "surface": "#E5D5C0",
+    "ink": "#1F1A17",
+    "accent": "#A14B2A",
+    "detail": "#8C6A3F"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "body": "IBM Plex Sans",
+    "mono": null
+  },
+  "dark_mode": false,
+  "hero": {
+    "kind": "photo",
+    "h1": "Water, *restored*.",
+    "sub": "Phoenix plumbing built for 115° summers and slab-foundation realities. Family-owned since 2004.",
+    "photo_url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&auto=format&fit=crop&q=80",
+    "photo_credit": "Photo by tian kuan on Unsplash",
+    "overlay": "rgba(28,18,12,0.50)",
+    "focal_point": "center"
+  },
+  "hero_3d": null,
+  "copy": {
+    "primary_cta": "Schedule a diagnostic →",
+    "primary_cta_href": "#contact",
+    "secondary_cta": "Call (602) 555-0173",
+    "secondary_cta_href": "tel:+16025550173",
+    "sticky_mobile_bar": "Same-day dispatch — (602) 555-0173"
+  },
+  "trust_strip": [
+    "Arizona ROC #312487",
+    "Bonded · Insured · BBB A+",
+    "NSF Water-Treatment Certified",
+    "Family-Owned Since 2004",
+    "Rinnai · Navien · Bradford White Partners"
+  ],
+  "service_area": {
+    "primary_city": "Phoenix, AZ",
+    "service_area_cities": [
+      "Scottsdale, AZ",
+      "Tempe, AZ",
+      "Mesa, AZ",
+      "Chandler, AZ",
+      "Gilbert, AZ",
+      "Glendale, AZ",
+      "Peoria, AZ",
+      "Surprise, AZ",
+      "Goodyear, AZ",
+      "Avondale, AZ",
+      "Buckeye, AZ",
+      "Queen Creek, AZ",
+      "Paradise Valley, AZ",
+      "Cave Creek, AZ",
+      "Carefree, AZ",
+      "Fountain Hills, AZ",
+      "Anthem, AZ",
+      "Sun City, AZ",
+      "Sun City West, AZ",
+      "Litchfield Park, AZ",
+      "Tolleson, AZ",
+      "Laveen, AZ",
+      "Ahwatukee, AZ",
+      "Apache Junction, AZ",
+      "El Mirage, AZ",
+      "Wickenburg, AZ",
+      "Maricopa, AZ",
+      "Casa Grande, AZ",
+      "Florence, AZ",
+      "New River, AZ"
+    ]
+  },
+  "services": [
+    {
+      "slug": "slab-leak-detection",
+      "title": "Slab Leak Detection",
+      "blurb": "Acoustic and thermal-imaging leak location through post-tension and conventional slabs without jackhammering on a guess. We document the leak coordinates, verify pressure recovery after repair, and coordinate the concrete and flooring trades so you are not orphaned mid-project."
+    },
+    {
+      "slug": "tankless-conversion",
+      "title": "Tankless Water Heater Conversion",
+      "blurb": "Rinnai and Navien condensing tankless installs sized to your fixture count, not the salesman's commission. Phoenix tap-water hardness is brutal on tankless exchangers — we install a softener loop or descaling kit on every conversion. Average 14-year service life when maintained."
+    },
+    {
+      "slug": "pex-repipe",
+      "title": "Whole-Home PEX Repipe",
+      "blurb": "Polybutylene and corroded copper retirements. PEX-A expansion fittings, manifold-and-home-run topology so any future fixture isolates without taking out the rest of the house. Drywall patches handled in-house — no third-party orphan."
+    },
+    {
+      "slug": "hydro-jetting",
+      "title": "Hydro-Jetting + Drain Restoration",
+      "blurb": "Camera inspection first, then 4,000 PSI water-jet for grease, scale, and root intrusion. We re-camera after to confirm full restoration. Cabling is for emergencies — jetting is the actual repair. We do not upsell you to a liner you don't need."
+    },
+    {
+      "slug": "ro-water-treatment",
+      "title": "Reverse-Osmosis Water Treatment",
+      "blurb": "Whole-home softening + point-of-use RO drinking-water systems. Maricopa County water at 17 grains hardness destroys water heaters in six years if untreated. NSF-certified membranes, annual filter delivery available, no recurring service contract required."
+    },
+    {
+      "slug": "sewer-camera",
+      "title": "Sewer Camera Inspection",
+      "blurb": "Pre-purchase and pre-renovation sewer-line scoping for cast-iron, Orangeburg, and clay-tile lines common under 1950s-1970s Phoenix homes. Recorded video, GPS line-locator, written report your real estate agent can hand to escrow."
+    }
+  ],
+  "process": [
+    {
+      "n": 1,
+      "title": "Same-day diagnostic",
+      "blurb": "Camera, pressure-test gear, and the truck stocked for the most common Phoenix repairs. Flat-rate diagnostic, written quote before any work begins."
+    },
+    {
+      "n": 2,
+      "title": "Written estimate",
+      "blurb": "Line-item parts and labor with three repair tiers when applicable. We name the brand and model going in."
+    },
+    {
+      "n": 3,
+      "title": "Permit-pulled install",
+      "blurb": "Every job that needs a permit gets one — your insurance carrier requires it. Inspections coordinated, photos sent."
+    },
+    {
+      "n": 4,
+      "title": "Pressure verification",
+      "blurb": "Static and dynamic pressure documented before we leave. You get the report, your file gets a copy for the next service call."
+    }
+  ],
+  "case_study": {
+    "title": "1979 Arcadia Ranch — Full PEX Repipe + Tankless Conversion",
+    "photo_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&auto=format&fit=crop&q=80",
+    "quote": "We bought the house knowing the polybutylene was on borrowed time. They did the full repipe in four days, patched every wall, and converted the heater to tankless in the same window. Insurance carrier dropped our premium twelve percent.",
+    "stats": [
+      {
+        "value": "4 days",
+        "label": "Full repipe + patch"
+      },
+      {
+        "value": "12%",
+        "label": "Insurance premium drop"
+      },
+      {
+        "value": "Lifetime",
+        "label": "PEX + workmanship warranty"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Bought our first house in Ahwatukee and the first water bill was four hundred dollars. Slab leak under the master bath. They found it in 90 minutes, repaired it in a day, and the bill the next month was forty dollars. Real money saved.",
+      "name": "Marisol G.",
+      "role": "First-time homeowner",
+      "city": "Phoenix, AZ"
+    },
+    {
+      "quote": "Six rentals across the East Valley. We swapped every water heater to tankless on a phased schedule and the maintenance time has dropped to almost nothing. They handle the city permit pulls — we just sign the work order.",
+      "name": "Brendan H.",
+      "role": "Landlord, six properties",
+      "city": "Mesa, AZ"
+    },
+    {
+      "quote": "Hard-water buildup was destroying every appliance in the house. They installed a whole-home softener and a point-of-use RO at the kitchen sink. Coffee tastes different — and the water heater is no longer a quarterly problem.",
+      "name": "Patricia W.",
+      "role": "Retiree, Sun City",
+      "city": "Sun City, AZ"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know if I have a slab leak versus a surface leak?",
+      "a": "Warm spots on the floor, an unexplained spike in your water bill, low pressure house-wide, or the sound of running water with every fixture off — those are the four classic indicators. We confirm with thermal imaging and acoustic listening before recommending any concrete work."
+    },
+    {
+      "q": "Tankless versus traditional — what's the Phoenix payback period?",
+      "a": "Roughly 7 to 9 years on energy savings alone, faster if you currently replace a tank water heater every 6 years (which is typical in untreated Phoenix water). The real win is endless hot water and freed-up garage square footage."
+    },
+    {
+      "q": "Why does Phoenix water destroy water heaters in 6 years?",
+      "a": "Maricopa County tap water runs 12 to 18 grains of hardness — three times the national average. Calcium scale plates onto the tank's anode rod and heating element until both fail. A whole-home softener pushes water heater life back to 12 to 15 years."
+    },
+    {
+      "q": "Do you handle ROC permits and inspections?",
+      "a": "Yes. Every job that requires a permit gets pulled, inspected, and closed by us. Your insurance carrier and any future buyer will ask for the permit history — we keep it clean and email you the closeout document."
+    },
+    {
+      "q": "What's the cost range for a full PEX repipe on a 1980s ranch?",
+      "a": "Typically $7,500 to $12,500 depending on fixture count, slab access, and whether we are repairing or replacing the wall finish. Polybutylene removals run higher because of the disposal requirements. Always a written quote before work begins."
+    },
+    {
+      "q": "Hard water in Maricopa — softener or whole-home filter?",
+      "a": "Softener for the scale, separate point-of-use RO at the kitchen sink for taste and minerals. A whole-home filter alone does not address hardness. We have customers who tried that route and ended up with two systems anyway — buy once if budget allows."
+    },
+    {
+      "q": "Emergency burst pipe — what's your response time in summer?",
+      "a": "Inside the 101 loop we average 60 to 90 minutes. Outside the loop runs 2 hours. Phoenix summer demand is brutal — we keep an after-hours rotation specifically for thermal-stress failures on copper risers."
+    },
+    {
+      "q": "Do you flat-rate or hourly? Written quote?",
+      "a": "Flat-rate by repair type, written quote before any tools come out of the truck. We do not invent line items mid-job. If the scope changes — say we open a wall and find polybutylene — we stop, document it with photos, and send a revised written quote for your approval."
+    }
+  ],
+  "lead_magnet": {
+    "title": "The Phoenix Plumbing Pre-Purchase Inspection Checklist",
+    "subtitle": "What to ask your inspector before closing on any 1970s-1990s desert home. 11 pages.",
+    "cta": "Get the guide →"
+  },
+  "photos": {
+    "hero": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&auto=format&fit=crop&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1604709177595-ee9c5cc4f4d4?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1280&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1556909172-54d3a888b03e?w=1280&auto=format&fit=crop&q=80"
+    ]
+  },
+  "competitors": [
+    "https://www.deervalleyplumbing.com",
+    "https://www.robinsplumbing.com",
+    "https://www.theaussieplumber.com",
+    "https://www.thegoodplumbersaz.com",
+    "https://www.benjaminfranklinplumbing.com/phoenix/"
+  ],
+  "anti_patterns": [
+    "Animated water-drop hero loop",
+    "Mr. Plumber mascot cartoon",
+    "Coupon pop-up modal on entry"
+  ],
+  "modules": {
+    "booking_calendar": true,
+    "service_area_map": true,
+    "photo_gallery": true,
+    "faq": true,
+    "lead_magnet": true
+  },
+  "contact": {
+    "form_endpoint": "https://api.web3forms.com/submit",
+    "calendly_url": "https://calendly.com/skynetlabs-demo/15min"
+  },
+  "seo": {
+    "title": "Plumbing Phoenix | Slab Leak + Tankless Specialists | SkynetLabs",
+    "description": "Phoenix plumbing built for 115° summers and slab foundations. ROC-licensed, family-owned since 2004. Same-day diagnostic + written quote.",
+    "keywords": [
+      "plumbing phoenix",
+      "slab leak phoenix",
+      "tankless water heater phoenix",
+      "pex repipe phoenix",
+      "sewer camera phoenix"
+    ],
+    "noindex": true
+  },
+  "demo_disclosure": {
+    "enabled": true,
+    "fiverr_cta_url": "https://www.fiverr.com/agencies/skynetjoellc?utm_source=demo&utm_campaign=plumbing",
+    "contact_cta_url": "https://skynetjoe.com/contact?utm_source=demo&utm_campaign=plumbing",
+    "portfolio_url": "https://skynetjoe.com/portfolio"
+  }
+}
