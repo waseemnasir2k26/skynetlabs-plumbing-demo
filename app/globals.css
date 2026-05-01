@@ -2,46 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ──────────────────────────────────────────────────────────────────────
+   PLUMBING — bespoke design system
+   Palette : cobalt #0046A8 + chrome #9DAEC4 + cream #FBFBF8 + navy ink
+   Type    : Manrope (display + body) — engineered uniformity
+   Mono    : JetBrains Mono — pipe-diagram callouts
+   Motion  : 300ms scroll-snap + iso pipe hover-illuminate
+   ────────────────────────────────────────────────────────────────────── */
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    /* Plumbing-tuned shadcn tokens */
+    --background: 60 33% 98%;          /* #FBFBF8 cream-paper */
+    --foreground: 218 53% 12%;         /* #0E1A2E navy ink */
     --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
-    --primary: 217 91% 36%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 26% 14%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-    --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 100%;
+    --card-foreground: 218 53% 12%;
+    --primary: 213 100% 33%;           /* #0046A8 cobalt */
+    --primary-foreground: 60 33% 98%;
+    --secondary: 213 28% 94%;          /* #EAEFF5 soft blue */
+    --secondary-foreground: 218 53% 12%;
+    --muted: 213 28% 94%;
+    --muted-foreground: 213 12% 42%;   /* #5C6878 steel grey */
+    --accent: 213 22% 70%;             /* #9DAEC4 chrome */
+    --accent-foreground: 218 53% 12%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 36%;
-    --radius: 0.625rem;
+    --border: 213 22% 86%;
+    --input: 213 22% 86%;
+    --ring: 213 100% 33%;
+    --radius: 0.5rem;
+
+    /* Plumbing iso-pipe palette (used by PipeIsoDiagram) */
+    --pipe-cold: #0046A8;
+    --pipe-hot:  #B33A2A;
+    --pipe-vent: #5C6878;
+    --pipe-drain: #2E3A4F;
+    --pipe-idle: #9DAEC4;
+    --pipe-glow: 0 0 12px rgba(0,70,168,0.55);
   }
 
   .dark {
-    --background: 220 26% 9%;
-    --foreground: 0 0% 95%;
-    --card: 220 26% 12%;
-    --card-foreground: 0 0% 95%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 26% 9%;
-    --secondary: 220 26% 16%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 220 26% 14%;
-    --muted-foreground: 220 9% 65%;
-    --accent: 24 95% 58%;
-    --accent-foreground: 0 0% 100%;
+    --background: 218 53% 8%;
+    --foreground: 60 33% 96%;
+    --card: 218 53% 11%;
+    --card-foreground: 60 33% 96%;
+    --primary: 213 100% 60%;
+    --primary-foreground: 218 53% 8%;
+    --secondary: 218 30% 16%;
+    --secondary-foreground: 60 33% 96%;
+    --muted: 218 30% 14%;
+    --muted-foreground: 213 12% 65%;
+    --accent: 213 22% 55%;
+    --accent-foreground: 60 33% 96%;
     --destructive: 0 84% 65%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 26% 18%;
-    --input: 220 26% 18%;
-    --ring: 217 91% 60%;
+    --border: 218 30% 20%;
+    --input: 218 30% 20%;
+    --ring: 213 100% 60%;
   }
 }
 
@@ -51,11 +68,16 @@
   }
   body {
     @apply bg-background font-body text-foreground antialiased;
+    font-family: var(--font-body-v2, var(--font-body));
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    letter-spacing: 0;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    font-family: var(--font-display, var(--font-heading));
+    letter-spacing: -0.025em;
+    font-weight: 700;
   }
   ::selection {
     @apply bg-primary text-primary-foreground;
@@ -65,5 +87,72 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Plumbing scroll-snap rail (used on services iso grid) */
+  .plumb-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .plumb-snap-x > * {
+    scroll-snap-align: start;
+  }
+  .plumb-snap-y {
+    scroll-snap-type: y proximity;
+  }
+  .plumb-snap-y > section {
+    scroll-snap-align: start;
+  }
+
+  /* Iso pipe hover-illuminate */
+  .iso-pipe {
+    transition: stroke 220ms ease, filter 220ms ease, opacity 220ms ease;
+    cursor: pointer;
+  }
+  .iso-pipe:hover,
+  .iso-pipe[data-active="true"] {
+    stroke: var(--pipe-cold);
+    filter: drop-shadow(0 0 6px rgba(0, 70, 168, 0.45));
+    opacity: 1;
+  }
+  .iso-pipe[data-kind="hot"]:hover,
+  .iso-pipe[data-kind="hot"][data-active="true"] {
+    stroke: var(--pipe-hot);
+    filter: drop-shadow(0 0 6px rgba(179, 58, 42, 0.45));
+  }
+  .iso-pipe[data-kind="vent"]:hover,
+  .iso-pipe[data-kind="vent"][data-active="true"] {
+    stroke: var(--pipe-vent);
+  }
+  .iso-pipe[data-kind="drain"]:hover,
+  .iso-pipe[data-kind="drain"][data-active="true"] {
+    stroke: var(--pipe-drain);
+  }
+
+  /* Iso joint dot (for pipe junctions) */
+  .iso-joint {
+    fill: var(--pipe-idle);
+    transition: fill 220ms ease;
+  }
+  .iso-joint[data-active="true"] {
+    fill: var(--pipe-cold);
+  }
+
+  /* Cobalt underline link */
+  .cobalt-link {
+    color: var(--pipe-cold);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: opacity 200ms ease;
+  }
+  .cobalt-link:hover { opacity: 0.7; }
+
+  /* Mono callout (pipe label) */
+  .pipe-callout {
+    font-family: var(--font-mono, "JetBrains Mono", ui-monospace);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pipe-cold);
   }
 }

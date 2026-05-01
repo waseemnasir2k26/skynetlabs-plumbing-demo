@@ -244,6 +244,12 @@ export const SiteConfigSchema = z.object({
   case_study: CaseStudySchema,
   lead_magnet: LeadMagnetV2Schema,
   photos: PhotosV2Schema,
+  // plumbing-bespoke: 4-tile hero mosaic (cell src can be 'iso' for the iso pipe SVG)
+  hero_mosaic: z.array(z.object({
+    src: z.string(),
+    alt: z.string(),
+    caption: z.string().optional(),
+  })).length(4).optional(),
   copy: z.object({
     h1: z.string().optional(),
     sub: z.string().optional(),

@@ -19,27 +19,49 @@
     "contact_phone": "+1-602-555-0173"
   },
   "palette": {
-    "bg": "#F2EBE0",
-    "surface": "#E5D5C0",
-    "ink": "#1F1A17",
-    "accent": "#A14B2A",
-    "detail": "#8C6A3F"
+    "bg": "#FBFBF8",
+    "surface": "#FFFFFF",
+    "ink": "#0E1A2E",
+    "accent": "#0046A8",
+    "detail": "#9DAEC4"
   },
   "fonts": {
-    "display": "Fraunces",
-    "body": "IBM Plex Sans",
-    "mono": null
+    "display": "Manrope",
+    "body": "Manrope",
+    "mono": "JetBrains Mono"
   },
   "dark_mode": false,
   "hero": {
     "kind": "photo",
-    "h1": "Water, *restored*.",
-    "sub": "Phoenix plumbing built for 115° summers and slab-foundation realities. Family-owned since 2004.",
+    "h1": "Plumbing, *engineered*.",
+    "sub": "Phoenix plumbing built for 115° summers and slab-foundation realities. Cobalt-precise diagnosis. Cleaner than we found it. Family-owned since 2004.",
     "photo_url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&auto=format&fit=crop&q=80",
     "photo_credit": "Photo by tian kuan on Unsplash",
-    "overlay": "rgba(28,18,12,0.50)",
+    "overlay": "rgba(14,26,46,0.30)",
     "focal_point": "center"
   },
+  "hero_mosaic": [
+    {
+      "src": "https://images.unsplash.com/photo-1584466977773-e625c37cdd50?w=1280&auto=format&fit=crop&q=80",
+      "alt": "Chrome faucet macro",
+      "caption": "Chrome. Calibrated."
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1280&auto=format&fit=crop&q=80",
+      "alt": "Technician installing under sink",
+      "caption": "Diagnostic. Documented."
+    },
+    {
+      "src": "iso",
+      "alt": "Isometric pipe diagram",
+      "caption": "Pressure. Verified."
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1280&auto=format&fit=crop&q=80",
+      "alt": "Clean white kitchen after job",
+      "caption": "Cleaner than we found it."
+    }
+  ],
   "hero_3d": null,
   "copy": {
     "primary_cta": "Schedule a diagnostic →",

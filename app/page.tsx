@@ -1,47 +1,51 @@
-import { Hero } from "@/components/sections/Hero";
-import { TrustStrip } from "@/components/sections/TrustStrip";
-import { ServicesEditorial } from "@/components/sections/ServicesEditorial";
+import { HeroMosaic } from "@/components/sections/HeroMosaic";
+import { ServicesIsoGrid } from "@/components/sections/ServicesIsoGrid";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { TrustStrip } from "@/components/sections/TrustStrip";
 import { CaseStudy } from "@/components/sections/CaseStudy";
-import { TestimonialsEditorial } from "@/components/sections/TestimonialsEditorial";
-import { PhotoGallery } from "@/components/sections/PhotoGallery";
 import { FAQv2 } from "@/components/sections/FAQv2";
-import { LeadMagnetV2 } from "@/components/sections/LeadMagnetV2";
-import { ServiceAreaWidget } from "@/components/sections/ServiceAreaWidget";
+import { CTABanner } from "@/components/sections/CTABanner";
 import { siteConfig } from "@/lib/config";
 
+/**
+ * Plumbing — bespoke section order per brief 2026-05-01.
+ *
+ *   1. Hero       — image-mosaic (4-tile, includes iso pipe diagram)
+ *   2. Services   — iso-illustration-grid (PipeIsoDiagram nav + 6 service cards w/ mini iso SVGs)
+ *   3. Process    — numbered-rail (4 steps)
+ *   4. TrustStrip — credential row (ROC + bonded + NSF + family-owned + brand partners)
+ *   5. CaseStudy  — split-image-text (1979 Arcadia ranch repipe)
+ *   6. FAQ        — accordion-clinical (8 plumbing-specific Qs)
+ *   7. CTABanner  — split-photo + booking form
+ *
+ * Why this beats default: visitors want to see what we do (Services iso) before
+ * credentials. Process before Trust because "first hour in my house" outranks
+ * license number. Stats killed (fake-feeling for plumbing). FAQ critical
+ * because plumbing FAQ traffic is huge.
+ */
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero */}
-      <Hero />
+      {/* 1. Hero — 4-tile image mosaic w/ embedded iso pipe diagram */}
+      <HeroMosaic />
 
-      {/* 2. Trust Strip (v2 — replaces TrustRow) */}
-      <TrustStrip />
+      {/* 2. Services — iso-illustration grid + PipeIsoDiagram nav widget */}
+      <ServicesIsoGrid />
 
-      {/* 3. Services — editorial 3-col */}
-      <ServicesEditorial />
-
-      {/* 4. Process Timeline (existing) */}
+      {/* 3. Process — numbered rail "What to expect" */}
       <ProcessTimeline />
 
-      {/* 5. Case Study (new, optional) */}
-      <CaseStudy />
+      {/* 4. TrustStrip — ROC + bonded + NSF + family-owned + brand partners */}
+      <TrustStrip />
 
-      {/* 6. Testimonials — 3-card editorial */}
-      <TestimonialsEditorial />
+      {/* 5. Case Study — single featured project */}
+      {siteConfig.case_study && <CaseStudy />}
 
-      {/* 7. Gallery — reads config.photos.gallery array */}
-      {(siteConfig.modules?.photo_gallery !== false) && <PhotoGallery />}
-
-      {/* 8. FAQ */}
+      {/* 6. FAQ — accordion-clinical */}
       {(siteConfig.modules?.faq !== false) && <FAQv2 />}
 
-      {/* 9. Lead Magnet */}
-      <LeadMagnetV2 />
-
-      {/* 10. Service Area Map */}
-      {(siteConfig.modules?.service_area_map !== false) && <ServiceAreaWidget />}
+      {/* 7. CTA Banner — split-photo + booking */}
+      <CTABanner />
     </>
   );
 }
